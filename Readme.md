@@ -59,8 +59,3 @@ pip install -r requirements.txt
 #### Sandbox Environment
 - Admin Demo Portal: https://admindemo.docusign.com/
 - Account Demo Portal: https://appdemo.docusign.com
-
-### Account Rep
-Name: Trent Tornincasa  
-Email: trent.tornincasa@docusign.com  
-Phone: 219-730-0222  
