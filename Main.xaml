@@ -1,0 +1,1867 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1955.2,1350.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:meaak="clr-namespace:McKenneys.Essentials.Activities.Activities.Keeper;assembly=McKenneys.Essentials.Activities" xmlns:mpa="clr-namespace:McKenneys.Powershell.Activities;assembly=McKenneys.Powershell.Activities" xmlns:msa="clr-namespace:McKenneys.SmartsheetAPI.Activities;assembly=McKenneys.SmartsheetAPI.Activities" xmlns:msaaa="clr-namespace:McKenneys.SmartsheetAPI.Activities.Activities.Attachments;assembly=McKenneys.SmartsheetAPI.Activities" xmlns:sam="clr-namespace:Smartsheet.Api.Models;assembly=smartsheet-csharp-sdk" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>McKenneys.Powershell.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Smartsheet.Api.Models</x:String>
+      <x:String>McKenneys.SmartsheetAPI.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>McKenneys.SmartsheetAPI.Activities.Activities.Attachments</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>McKenneys.Essentials.Activities.Activities.Keeper</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="80">
+      <AssemblyReference>DTtoHTML</AssemblyReference>
+      <AssemblyReference>McKenneys.Powershell.Activities</AssemblyReference>
+      <AssemblyReference>McKenneys.SmartsheetAPI.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>smartsheet-csharp-sdk</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>McKenneys.Essentials.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1179.2,1285.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="1116.8,1173.6" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="foreman_dt" />
+        <Variable x:TypeArguments="x:Int64" Default="4804808805771140" Name="forms_sheet_id" />
+        <Variable x:TypeArguments="sam:Sheet" Name="forms_sheet" />
+        <Variable x:TypeArguments="sd:DataTable" Name="filtered_mvr_data" />
+        <Variable x:TypeArguments="ss:SecureString" Name="token" />
+        <Variable x:TypeArguments="x:Int64" Default="3557613972547460" Name="mvr_sheet_id" />
+        <Variable x:TypeArguments="x:String" Name="powershell_file_path">
+          <Variable.Default>
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_443">"./" + "McKenneys_Esign\\runscript.ps1"</CSharpValue>
+          </Variable.Default>
+        </Variable>
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">550,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">580,77.5 580,99.5</av:PointCollection>
+          <x:Double x:Key="Height">1137</x:Double>
+          <x:Double x:Key="Width">1083.3333333333328</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID10</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID0">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,629.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,712.7 300,739.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Awaiting Signature" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="envelopes_sent_csv" />
+            <Variable x:TypeArguments="scg:List(sam:Row)" Name="new_rows" />
+            <Variable x:TypeArguments="sd:DataTable" Name="SPdump_csv" />
+            <Variable x:TypeArguments="scg:List(sam:Row)" Name="update_rows" />
+            <Variable x:TypeArguments="sam:Sheet" Name="mvr_sheet" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <msa:GetSheetData ContinueOnError="False" DisplayName="Get Sheet" sap:VirtualizedContainerService.HintSize="625.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetData_2" _continueOnError="False">
+            <msa:GetSheetData.Result>
+              <OutArgument x:TypeArguments="sam:Sheet">
+                <CSharpReference x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">mvr_sheet</CSharpReference>
+              </OutArgument>
+            </msa:GetSheetData.Result>
+            <msa:GetSheetData.SheetID>
+              <InArgument x:TypeArguments="x:Int64">
+                <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">mvr_sheet_id</CSharpValue>
+              </InArgument>
+            </msa:GetSheetData.SheetID>
+          </msa:GetSheetData>
+          <ui:ReadCsvFile Delimitator="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="625.3333333333334,159.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCsvFile_5">
+            <ui:ReadCsvFile.DataTable>
+              <OutArgument x:TypeArguments="sd:DataTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">envelopes_sent_csv</CSharpReference>
+              </OutArgument>
+            </ui:ReadCsvFile.DataTable>
+            <ui:ReadCsvFile.FilePath>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_399" xml:space="preserve">"./" + "Mckenneys_Esign\\CSV_Folder\\" +  "envelopes_sent.csv"</CSharpValue>
+              </InArgument>
+            </ui:ReadCsvFile.FilePath>
+          </ui:ReadCsvFile>
+          <Assign sap:VirtualizedContainerService.HintSize="625.3333333333334,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="scg:List(sam:Row)">
+                <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">new_rows</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="scg:List(sam:Row)">
+                <CSharpValue x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">new List&lt;Row&gt;()</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.3333333333334,1102.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.6666666666666,982.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sam:Row" Name="new_row" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="478.6666666666667,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="sam:Row">
+                        <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">new_row</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="sam:Row">
+                        <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">new Row()</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:ForEach x:TypeArguments="sd:DataColumn" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="478.6666666666667,563.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_4">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="sd:DataColumn">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataColumn" Name="item" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,345.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <msa:BuildRow ContinueOnError="False" DisplayName="Build Row" sap:VirtualizedContainerService.HintSize="338,234.66666666666666" sap2010:WorkflowViewState.IdRef="BuildRow_2" StrictValidation="False" _continueOnError="False">
+                            <msa:BuildRow.CellValue>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">CurrentRow[item.ColumnName].ToString()</CSharpValue>
+                              </InArgument>
+                            </msa:BuildRow.CellValue>
+                            <msa:BuildRow.ColumnName>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">item.ColumnName</CSharpValue>
+                              </InArgument>
+                            </msa:BuildRow.ColumnName>
+                            <msa:BuildRow.Row>
+                              <InOutArgument x:TypeArguments="sam:Row">
+                                <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">new_row</CSharpReference>
+                              </InOutArgument>
+                            </msa:BuildRow.Row>
+                            <msa:BuildRow.Sheet>
+                              <InArgument x:TypeArguments="sam:Sheet">
+                                <CSharpValue x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">mvr_sheet</CSharpValue>
+                              </InArgument>
+                            </msa:BuildRow.Sheet>
+                          </msa:BuildRow>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                    <ui:ForEach.CurrentIndex>
+                      <OutArgument x:TypeArguments="x:Int32" />
+                    </ui:ForEach.CurrentIndex>
+                    <ui:ForEach.Values>
+                      <InArgument x:TypeArguments="sc:IEnumerable">
+                        <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">envelopes_sent_csv.Columns</CSharpValue>
+                      </InArgument>
+                    </ui:ForEach.Values>
+                  </ui:ForEach>
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="new_rows.Add(new_row);" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+                    <ui:InvokeCode.Arguments>
+                      <InOutArgument x:TypeArguments="scg:List(sam:Row)" x:Key="new_rows">
+                        <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">new_rows</CSharpReference>
+                      </InOutArgument>
+                      <InArgument x:TypeArguments="sam:Row" x:Key="new_row">
+                        <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">new_row</CSharpValue>
+                      </InArgument>
+                    </ui:InvokeCode.Arguments>
+                  </ui:InvokeCode>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <ui:ForEachRow.DataTable>
+              <InArgument x:TypeArguments="sd:DataTable">
+                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">envelopes_sent_csv</CSharpValue>
+              </InArgument>
+            </ui:ForEachRow.DataTable>
+          </ui:ForEachRow>
+          <msa:AddRows Row="{x:Null}" AllowPartialSuccess="False" ContinueOnError="False" DisplayName="Add Rows" sap:VirtualizedContainerService.HintSize="625.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="AddRows_2" InsertionLocation="Top" _continueOnError="False">
+            <msa:AddRows.Rows>
+              <InArgument x:TypeArguments="scg:IList(sam:Row)">
+                <CSharpValue x:TypeArguments="scg:IList(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">new_rows</CSharpValue>
+              </InArgument>
+            </msa:AddRows.Rows>
+            <msa:AddRows.SheetID>
+              <InArgument x:TypeArguments="x:Int64">
+                <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">mvr_sheet_id</CSharpValue>
+              </InArgument>
+            </msa:AddRows.SheetID>
+          </msa:AddRows>
+          <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="625.3333333333334,1896" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="forms_sheet_dt" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadCsvFile Delimitator="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="563.3333333333334,159.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCsvFile_6">
+              <ui:ReadCsvFile.DataTable>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">SPdump_csv</CSharpReference>
+                </OutArgument>
+              </ui:ReadCsvFile.DataTable>
+              <ui:ReadCsvFile.FilePath>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_400">"./" + "Mckenneys_Esign\\CSV_Folder\\" + "SPdump.csv"</CSharpValue>
+                </InArgument>
+              </ui:ReadCsvFile.FilePath>
+            </ui:ReadCsvFile>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="563.3333333333334,92" sap2010:WorkflowViewState.IdRef="WriteLine_6">
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">"Number of Statuses to change: " + SPdump_csv.Rows.Count.ToString()</CSharpValue>
+              </InArgument>
+            </WriteLine>
+            <msa:GetSheetData ContinueOnError="False" DisplayName="Get Sheet" sap:VirtualizedContainerService.HintSize="563.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetData_5" _continueOnError="False">
+              <msa:GetSheetData.Result>
+                <OutArgument x:TypeArguments="sam:Sheet">
+                  <CSharpReference x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">forms_sheet</CSharpReference>
+                </OutArgument>
+              </msa:GetSheetData.Result>
+              <msa:GetSheetData.SheetID>
+                <InArgument x:TypeArguments="x:Int64">
+                  <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">forms_sheet_id</CSharpValue>
+                </InArgument>
+              </msa:GetSheetData.SheetID>
+            </msa:GetSheetData>
+            <msa:GetSheetAsDataTable SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as DataTable" sap:VirtualizedContainerService.HintSize="563.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetAsDataTable_1" _continueOnError="False">
+              <msa:GetSheetAsDataTable.DataTable>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">forms_sheet_dt</CSharpReference>
+                </OutArgument>
+              </msa:GetSheetAsDataTable.DataTable>
+              <msa:GetSheetAsDataTable.SheetID>
+                <InArgument x:TypeArguments="x:Int64">
+                  <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">forms_sheet_id</CSharpValue>
+                </InArgument>
+              </msa:GetSheetAsDataTable.SheetID>
+            </msa:GetSheetAsDataTable>
+            <Assign sap:VirtualizedContainerService.HintSize="563.3333333333334,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:List(sam:Row)">
+                  <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">update_rows</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(sam:Row)">
+                  <CSharpValue x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">new List &lt;Row&gt;()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="563.3333333333334,970.6666666666666" sap2010:WorkflowViewState.IdRef="ForEach`1_16">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="body" sap:VirtualizedContainerService.HintSize="484.6666666666667,752.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="emp_id" />
+                      <Variable x:TypeArguments="x:String" Name="row_id" />
+                      <Variable x:TypeArguments="sam:Row" Name="update_row" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="422.6666666666667,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">emp_id</CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">row["EmpID"].ToString()</CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="sam:Row">
+                                <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_44">update_row</CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="sam:Row">
+                                <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">new Row()</CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">row_id</CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_260" xml:space="preserve">(from DataRow dr in forms_sheet_dt.Rows
+              where (string)dr["Foreman EmpID"] == emp_id
+              select dr["_rowID"].ToString()).FirstOrDefault()</CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <msa:BuildRow CellValue="2. MVR Form Awaiting Signature" ColumnName="Vehicle Assignment" ContinueOnError="False" DisplayName="Build Row" sap:VirtualizedContainerService.HintSize="422.6666666666667,234.66666666666666" sap2010:WorkflowViewState.IdRef="BuildRow_4" StrictValidation="False" _continueOnError="False">
+                      <msa:BuildRow.Row>
+                        <InOutArgument x:TypeArguments="sam:Row">
+                          <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">update_row</CSharpReference>
+                        </InOutArgument>
+                      </msa:BuildRow.Row>
+                      <msa:BuildRow.Sheet>
+                        <InArgument x:TypeArguments="sam:Sheet">
+                          <CSharpValue x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_117">forms_sheet</CSharpValue>
+                        </InArgument>
+                      </msa:BuildRow.Sheet>
+                    </msa:BuildRow>
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try {&#xA;&#x9;update_row.Id = long.Parse(row_id);&#xA;&#x9;update_rows.Add(update_row);&#xA;}&#xA;&#xA;catch (Exception e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;&#x9;throw;&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="422.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+                      <ui:InvokeCode.Arguments>
+                        <InOutArgument x:TypeArguments="scg:List(sam:Row)" x:Key="update_rows">
+                          <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">update_rows</CSharpReference>
+                        </InOutArgument>
+                        <InArgument x:TypeArguments="sam:Row" x:Key="update_row">
+                          <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">update_row</CSharpValue>
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="row_id">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_119">row_id</CSharpValue>
+                        </InArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <ui:ForEach.Values>
+                <InArgument x:TypeArguments="sc:IEnumerable">
+                  <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">SPdump_csv.Rows</CSharpValue>
+                </InArgument>
+              </ui:ForEach.Values>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <msa:UpdateRows Row="{x:Null}" AllowPartialSuccess="False" ContinueOnError="False" DisplayName="Update Rows" sap:VirtualizedContainerService.HintSize="563.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="UpdateRows_1" _continueOnError="False">
+              <msa:UpdateRows.Rows>
+                <InArgument x:TypeArguments="scg:IList(sam:Row)">
+                  <CSharpValue x:TypeArguments="scg:IList(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">update_rows</CSharpValue>
+                </InArgument>
+              </msa:UpdateRows.Rows>
+              <msa:UpdateRows.SheetID>
+                <InArgument x:TypeArguments="x:Int64">
+                  <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">forms_sheet_id</CSharpValue>
+                </InArgument>
+              </msa:UpdateRows.SheetID>
+            </msa:UpdateRows>
+          </Sequence>
+        </Sequence>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">200,739.5</av:Point>
+                <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,822.7 300,849.5</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Envelopes Signed" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="download_path" />
+                <Variable x:TypeArguments="x:Boolean" Name="exists" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="856,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">download_path</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_401">"./" + "Mckenneys_Esign//CSV_Folder//signed_envelopes.csv"</CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="856,136.66666666666666" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
+                <ui:FileExistsX.Exists>
+                  <OutArgument x:TypeArguments="x:Boolean">
+                    <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_78">exists</CSharpReference>
+                  </OutArgument>
+                </ui:FileExistsX.Exists>
+                <ui:FileExistsX.Path>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_227">download_path</CSharpValue>
+                  </InArgument>
+                </ui:FileExistsX.Path>
+              </ui:FileExistsX>
+              <If sap:VirtualizedContainerService.HintSize="856,5214" sap2010:WorkflowViewState.IdRef="If_7">
+                <If.Condition>
+                  <InArgument x:TypeArguments="x:Boolean">
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_228">exists == true</CSharpValue>
+                  </InArgument>
+                </If.Condition>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="777.3333333333334,4776" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="signed_envelopes" />
+                      <Variable x:TypeArguments="scg:List(sam:Row)" Name="update_rows" />
+                      <Variable x:TypeArguments="sam:Sheet" Name="mvr_sheet" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="forms_dt" />
+                      <Variable x:TypeArguments="sam:Sheet" Name="forms_sheet" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="mvr_filter" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="715.3333333333334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_11">
+                      <ui:LogMessage.Level>
+                        <InArgument x:TypeArguments="ui:LogLevel">
+                          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_229">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Level>
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_230">"File does exist"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                    <msa:GetSheetData ContinueOnError="False" DisplayName="Get Sheet" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetData_8" _continueOnError="False">
+                      <msa:GetSheetData.Result>
+                        <OutArgument x:TypeArguments="sam:Sheet">
+                          <CSharpReference x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_86">mvr_sheet</CSharpReference>
+                        </OutArgument>
+                      </msa:GetSheetData.Result>
+                      <msa:GetSheetData.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_241">mvr_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:GetSheetData.SheetID>
+                    </msa:GetSheetData>
+                    <msa:GetSheetAsDataTable SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as DataTable" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetAsDataTable_5" _continueOnError="False">
+                      <msa:GetSheetAsDataTable.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_93">foreman_dt</CSharpReference>
+                        </OutArgument>
+                      </msa:GetSheetAsDataTable.DataTable>
+                      <msa:GetSheetAsDataTable.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_242">mvr_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:GetSheetAsDataTable.SheetID>
+                    </msa:GetSheetAsDataTable>
+                    <Assign sap:VirtualizedContainerService.HintSize="715.3333333333334,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="scg:List(sam:Row)">
+                          <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">update_rows</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="scg:List(sam:Row)">
+                          <CSharpValue x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_240">new List &lt;Row&gt;()</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ReadCsvFile Delimitator="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="715.3333333333334,159.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCsvFile_8">
+                      <ui:ReadCsvFile.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_92">signed_envelopes</CSharpReference>
+                        </OutArgument>
+                      </ui:ReadCsvFile.DataTable>
+                      <ui:ReadCsvFile.FilePath>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_402">"./" + "Mckenneys_Esign\\CSV_Folder\\signed_envelopes.csv"</CSharpValue>
+                        </InArgument>
+                      </ui:ReadCsvFile.FilePath>
+                    </ui:ReadCsvFile>
+                    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="715.3333333333334,2074.6666666666665" sap2010:WorkflowViewState.IdRef="ForEach`1_18">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="636.6666666666666,1856.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="envelope_id" />
+                              <Variable x:TypeArguments="sam:Row" Name="update_row" />
+                              <Variable x:TypeArguments="x:String" Name="row_id" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="574.6666666666666,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_87">envelope_id</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_244">row["Envelope ID"].ToString()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="sam:Row">
+                                        <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_88">update_row</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="sam:Row">
+                                        <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_245">new Row()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_89">row_id</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_363" xml:space="preserve">(from DataRow dr in foreman_dt.Rows
+              where (string)dr["Envelope ID"] == envelope_id
+              select dr["_rowID"].ToString()).FirstOrDefault()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <msa:BuildRow CellValue="New" ColumnName="Status" ContinueOnError="False" DisplayName="Build Row" sap:VirtualizedContainerService.HintSize="574.6666666666666,234.66666666666666" sap2010:WorkflowViewState.IdRef="BuildRow_6" StrictValidation="False" _continueOnError="False">
+                              <msa:BuildRow.Row>
+                                <InOutArgument x:TypeArguments="sam:Row">
+                                  <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_90">update_row</CSharpReference>
+                                </InOutArgument>
+                              </msa:BuildRow.Row>
+                              <msa:BuildRow.Sheet>
+                                <InArgument x:TypeArguments="sam:Sheet">
+                                  <CSharpValue x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_247">mvr_sheet</CSharpValue>
+                                </InArgument>
+                              </msa:BuildRow.Sheet>
+                            </msa:BuildRow>
+                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="try {&#xA;&#x9;update_row.Id = long.Parse(row_id);&#xA;&#x9;update_rows.Add(update_row);&#xA;}&#xA;&#xA;catch (Exception e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;&#x9;throw;&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="574.6666666666666,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_6" Language="CSharp">
+                              <ui:InvokeCode.Arguments>
+                                <InOutArgument x:TypeArguments="scg:List(sam:Row)" x:Key="update_rows">
+                                  <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_91">update_rows</CSharpReference>
+                                </InOutArgument>
+                                <InArgument x:TypeArguments="sam:Row" x:Key="update_row">
+                                  <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_248">update_row</CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="row_id">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_249">row_id</CSharpValue>
+                                </InArgument>
+                              </ui:InvokeCode.Arguments>
+                            </ui:InvokeCode>
+                            <ui:ForEachFileX DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="574.6666666666666,1064" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                              <ui:ForEachFileX.Body>
+                                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                                  <ActivityAction.Argument1>
+                                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="pdf" />
+                                  </ActivityAction.Argument1>
+                                  <ActivityAction.Argument2>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                  </ActivityAction.Argument2>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540.6666666666666,794" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="pdf_match" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Matches BuilderPattern="[^\\]+(?=\.pdf)" DisplayName="Find Matching Patterns" sap:VirtualizedContainerService.HintSize="478.6666666666667,60" sap2010:WorkflowViewState.IdRef="Matches_2" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;[^\\\\]+(?=\\.pdf)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[^\\]+(?=\.pdf)" RegexOption="IgnoreCase, Compiled">
+                                      <ui:Matches.FirstMatch>
+                                        <OutArgument x:TypeArguments="x:String">
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_145">pdf_match</CSharpReference>
+                                        </OutArgument>
+                                      </ui:Matches.FirstMatch>
+                                      <ui:Matches.Input>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_365">pdf.ToString()</CSharpValue>
+                                        </InArgument>
+                                      </ui:Matches.Input>
+                                    </ui:Matches>
+                                    <If sap:VirtualizedContainerService.HintSize="478.6666666666667,583.3333333333334" sap2010:WorkflowViewState.IdRef="If_13">
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_366">pdf_match == envelope_id</CSharpValue>
+                                        </InArgument>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <msaaa:AttachFileToRow ContinueOnError="False" DisplayName="Attach File to Row" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="AttachFileToRow_3" _continueOnError="False">
+                                            <msaaa:AttachFileToRow.FilePath>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_369">pdf.FullName.ToString()</CSharpValue>
+                                              </InArgument>
+                                            </msaaa:AttachFileToRow.FilePath>
+                                            <msaaa:AttachFileToRow.RowID>
+                                              <InArgument x:TypeArguments="x:Int64">
+                                                <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_368">long.Parse(row_id)</CSharpValue>
+                                              </InArgument>
+                                            </msaaa:AttachFileToRow.RowID>
+                                            <msaaa:AttachFileToRow.SheetID>
+                                              <InArgument x:TypeArguments="x:Int64">
+                                                <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_367">mvr_sheet_id</CSharpValue>
+                                              </InArgument>
+                                            </msaaa:AttachFileToRow.SheetID>
+                                          </msaaa:AttachFileToRow>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachFileX.Body>
+                              <ui:ForEachFileX.Folder>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_364">"./" + "Mckenneys_Esign\\Signed Envelopes"</CSharpValue>
+                                </InArgument>
+                              </ui:ForEachFileX.Folder>
+                            </ui:ForEachFileX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                      <ui:ForEach.Values>
+                        <InArgument x:TypeArguments="sc:IEnumerable">
+                          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_243">signed_envelopes.Rows</CSharpValue>
+                        </InArgument>
+                      </ui:ForEach.Values>
+                    </ui:ForEach>
+                    <msa:UpdateRows Row="{x:Null}" AllowPartialSuccess="False" ContinueOnError="False" DisplayName="Update Rows" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="UpdateRows_3" _continueOnError="False">
+                      <msa:UpdateRows.Rows>
+                        <InArgument x:TypeArguments="scg:IList(sam:Row)">
+                          <CSharpValue x:TypeArguments="scg:IList(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_263">update_rows</CSharpValue>
+                        </InArgument>
+                      </msa:UpdateRows.Rows>
+                      <msa:UpdateRows.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_264">mvr_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:UpdateRows.SheetID>
+                    </msa:UpdateRows>
+                    <msa:GetSheetData ContinueOnError="False" DisplayName="Get Sheet" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetData_9" _continueOnError="False">
+                      <msa:GetSheetData.Result>
+                        <OutArgument x:TypeArguments="sam:Sheet">
+                          <CSharpReference x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_94">forms_sheet</CSharpReference>
+                        </OutArgument>
+                      </msa:GetSheetData.Result>
+                      <msa:GetSheetData.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_266">forms_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:GetSheetData.SheetID>
+                    </msa:GetSheetData>
+                    <msa:GetSheetAsDataTable SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as DataTable" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetAsDataTable_6" _continueOnError="False">
+                      <msa:GetSheetAsDataTable.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_95">forms_dt</CSharpReference>
+                        </OutArgument>
+                      </msa:GetSheetAsDataTable.DataTable>
+                      <msa:GetSheetAsDataTable.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_267">forms_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:GetSheetAsDataTable.SheetID>
+                    </msa:GetSheetAsDataTable>
+                    <msa:GetSheetAsDataTable SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as DataTable" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetAsDataTable_7" _continueOnError="False">
+                      <msa:GetSheetAsDataTable.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_96">foreman_dt</CSharpReference>
+                        </OutArgument>
+                      </msa:GetSheetAsDataTable.DataTable>
+                      <msa:GetSheetAsDataTable.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_268">mvr_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:GetSheetAsDataTable.SheetID>
+                    </msa:GetSheetAsDataTable>
+                    <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="715.3333333333334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" SelectColumnsMode="Remove">
+                      <ui:FilterDataTable.DataTable>
+                        <InArgument x:TypeArguments="sd:DataTable">
+                          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_272">foreman_dt</CSharpValue>
+                        </InArgument>
+                      </ui:FilterDataTable.DataTable>
+                      <ui:FilterDataTable.Filters>
+                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_269">"Status"</CSharpValue>
+                              </InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_270">"New"</CSharpValue>
+                              </InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                          <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="NOTEMPTY">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_271">"Employee ID"</CSharpValue>
+                              </InArgument>
+                            </ui:FilterOperationArgument.Column>
+                          </ui:FilterOperationArgument>
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_389">"Created By"</CSharpValue>
+                              </InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_390">"smartsheet.apis@mckenneys.com"</CSharpValue>
+                              </InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.Filters>
+                      <ui:FilterDataTable.OutputDataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_97">mvr_filter</CSharpReference>
+                        </OutArgument>
+                      </ui:FilterDataTable.OutputDataTable>
+                      <ui:FilterDataTable.SelectColumns>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <x:Null />
+                        </scg:List>
+                      </ui:FilterDataTable.SelectColumns>
+                    </ui:FilterDataTable>
+                    <Assign sap:VirtualizedContainerService.HintSize="715.3333333333334,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="scg:List(sam:Row)">
+                          <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_98">update_rows</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="scg:List(sam:Row)">
+                          <CSharpValue x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_273">new List&lt;Row&gt;()</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="715.3333333333334,869.3333333333334" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.6666666666667,752.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="emp_id" />
+                              <Variable x:TypeArguments="sam:Row" Name="update_row" />
+                              <Variable x:TypeArguments="x:String" Name="row_id" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="422.6666666666667,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_99">emp_id</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_275">row["Employee ID"].ToString()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="sam:Row">
+                                        <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_100">update_row</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="sam:Row">
+                                        <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_276">new Row()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_101">row_id</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_350" xml:space="preserve">(from DataRow dr in forms_dt.Rows
+              where (string)dr["Foreman EmpID"] == emp_id
+              select dr["_rowID"].ToString()).FirstOrDefault()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <msa:BuildRow CellValue="3. MVR Form Awaiting Vehicles Team" ColumnName="Vehicle Assignment" ContinueOnError="False" DisplayName="Build Row" sap:VirtualizedContainerService.HintSize="422.6666666666667,234.66666666666666" sap2010:WorkflowViewState.IdRef="BuildRow_7" StrictValidation="False" _continueOnError="False">
+                              <msa:BuildRow.Row>
+                                <InOutArgument x:TypeArguments="sam:Row">
+                                  <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_102">update_row</CSharpReference>
+                                </InOutArgument>
+                              </msa:BuildRow.Row>
+                              <msa:BuildRow.Sheet>
+                                <InArgument x:TypeArguments="sam:Sheet">
+                                  <CSharpValue x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_278">forms_sheet</CSharpValue>
+                                </InArgument>
+                              </msa:BuildRow.Sheet>
+                            </msa:BuildRow>
+                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="try {&#xA;&#x9;update_row.Id = long.Parse(row_id);&#xA;&#x9;update_rows.Add(update_row);&#xA;}&#xA;&#xA;catch (Exception e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;&#x9;throw;&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="422.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_7" Language="CSharp">
+                              <ui:InvokeCode.Arguments>
+                                <InArgument x:TypeArguments="sam:Row" x:Key="update_row">
+                                  <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_280">update_row</CSharpValue>
+                                </InArgument>
+                                <InOutArgument x:TypeArguments="scg:List(sam:Row)" x:Key="update_rows">
+                                  <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_103">update_rows</CSharpReference>
+                                </InOutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="row_id">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_279">row_id</CSharpValue>
+                                </InArgument>
+                              </ui:InvokeCode.Arguments>
+                            </ui:InvokeCode>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <ui:ForEachRow.DataTable>
+                        <InArgument x:TypeArguments="sd:DataTable">
+                          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_274">mvr_filter</CSharpValue>
+                        </InArgument>
+                      </ui:ForEachRow.DataTable>
+                    </ui:ForEachRow>
+                    <msa:UpdateRows Row="{x:Null}" AllowPartialSuccess="False" ContinueOnError="False" DisplayName="Update Rows" sap:VirtualizedContainerService.HintSize="715.3333333333334,86.66666666666667" sap2010:WorkflowViewState.IdRef="UpdateRows_4" _continueOnError="False">
+                      <msa:UpdateRows.Rows>
+                        <InArgument x:TypeArguments="scg:IList(sam:Row)">
+                          <CSharpValue x:TypeArguments="scg:IList(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_281">update_rows</CSharpValue>
+                        </InArgument>
+                      </msa:UpdateRows.Rows>
+                      <msa:UpdateRows.SheetID>
+                        <InArgument x:TypeArguments="x:Int64">
+                          <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_282">forms_sheet_id</CSharpValue>
+                        </InArgument>
+                      </msa:UpdateRows.SheetID>
+                    </msa:UpdateRows>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_10">
+                      <ui:LogMessage.Level>
+                        <InArgument x:TypeArguments="ui:LogLevel">
+                          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_231">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Level>
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_233">"no statuses to check"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">200,849.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">400,891.1 430,891.1</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Complete " sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="mvr_data_table" />
+                    <Variable x:TypeArguments="x:Int32" Name="row_count" />
+                    <Variable x:TypeArguments="sd:DataTable" Name="forms_sheet_dt" />
+                    <Variable x:TypeArguments="scg:List(sam:Row)" Name="update_rows" />
+                    <Variable x:TypeArguments="scg:List(x:String)" Name="empIDsAwaitingSignature" />
+                    <Variable x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="filtered_rows" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <msa:GetSheetData ContinueOnError="False" DisplayName="Get Sheet" sap:VirtualizedContainerService.HintSize="580.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetData_7" _continueOnError="False">
+                    <msa:GetSheetData.Result>
+                      <OutArgument x:TypeArguments="sam:Sheet">
+                        <CSharpReference x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">forms_sheet</CSharpReference>
+                      </OutArgument>
+                    </msa:GetSheetData.Result>
+                    <msa:GetSheetData.SheetID>
+                      <InArgument x:TypeArguments="x:Int64">
+                        <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_131">forms_sheet_id</CSharpValue>
+                      </InArgument>
+                    </msa:GetSheetData.SheetID>
+                  </msa:GetSheetData>
+                  <msa:GetSheetAsDataTable SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as DataTable" sap:VirtualizedContainerService.HintSize="580.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetAsDataTable_2" _continueOnError="False">
+                    <msa:GetSheetAsDataTable.DataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">mvr_data_table</CSharpReference>
+                      </OutArgument>
+                    </msa:GetSheetAsDataTable.DataTable>
+                    <msa:GetSheetAsDataTable.SheetID>
+                      <InArgument x:TypeArguments="x:Int64">
+                        <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">mvr_sheet_id</CSharpValue>
+                      </InArgument>
+                    </msa:GetSheetAsDataTable.SheetID>
+                  </msa:GetSheetAsDataTable>
+                  <msa:GetSheetAsDataTable SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as DataTable" sap:VirtualizedContainerService.HintSize="580.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="GetSheetAsDataTable_3" _continueOnError="False">
+                    <msa:GetSheetAsDataTable.DataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">forms_sheet_dt</CSharpReference>
+                      </OutArgument>
+                    </msa:GetSheetAsDataTable.DataTable>
+                    <msa:GetSheetAsDataTable.SheetID>
+                      <InArgument x:TypeArguments="x:Int64">
+                        <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">forms_sheet_id</CSharpValue>
+                      </InArgument>
+                    </msa:GetSheetAsDataTable.SheetID>
+                  </msa:GetSheetAsDataTable>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="580.6666666666666,100.66666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_151">row_count</CSharpReference>
+                            </OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_412">mvr_data_table.ColumnCount()</CSharpValue>
+                            </InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                    <ui:LogMessage.Level>
+                      <InArgument x:TypeArguments="ui:LogLevel">
+                        <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Level>
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">"Number of cells in a row: " + row_count.ToString()</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                  <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="580.6666666666666,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
+                    <ui:FilterDataTable.DataTable>
+                      <InArgument x:TypeArguments="sd:DataTable">
+                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_183">mvr_data_table</CSharpValue>
+                      </InArgument>
+                    </ui:FilterDataTable.DataTable>
+                    <ui:FilterDataTable.Filters>
+                      <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                        <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_180">"Status"</CSharpValue>
+                            </InArgument>
+                          </ui:FilterOperationArgument.Column>
+                          <ui:FilterOperationArgument.Operand>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">"Approved"</CSharpValue>
+                            </InArgument>
+                          </ui:FilterOperationArgument.Operand>
+                        </ui:FilterOperationArgument>
+                        <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="NOTEMPTY">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">"Employee ID"</CSharpValue>
+                            </InArgument>
+                          </ui:FilterOperationArgument.Column>
+                        </ui:FilterOperationArgument>
+                        <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_391">"Created By"</CSharpValue>
+                            </InArgument>
+                          </ui:FilterOperationArgument.Column>
+                          <ui:FilterOperationArgument.Operand>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_392">"smartsheet.apis@mckenneys.com"</CSharpValue>
+                            </InArgument>
+                          </ui:FilterOperationArgument.Operand>
+                        </ui:FilterOperationArgument>
+                      </scg:List>
+                    </ui:FilterDataTable.Filters>
+                    <ui:FilterDataTable.OutputDataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_62">mvr_data_table</CSharpReference>
+                      </OutArgument>
+                    </ui:FilterDataTable.OutputDataTable>
+                    <ui:FilterDataTable.SelectColumns>
+                      <scg:List x:TypeArguments="InArgument" Capacity="4">
+                        <x:Null />
+                      </scg:List>
+                    </ui:FilterDataTable.SelectColumns>
+                  </ui:FilterDataTable>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="580.6666666666666,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="scg:List(x:String)">
+                              <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_158">empIDsAwaitingSignature</CSharpReference>
+                            </OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="scg:List(x:String)">
+                              <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_438" xml:space="preserve">(from DataRow dr in forms_sheet_dt.Rows
+              where (string)dr["Vehicle Assignment"] == "3. MVR Form Awaiting Vehicles Team"
+              select dr["Foreman EmpID"].ToString()).ToList()</CSharpValue>
+                            </InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
+                              <CSharpReference x:TypeArguments="scg:IEnumerable(sd:DataRow)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_159">filtered_rows</CSharpReference>
+                            </OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
+                              <CSharpValue x:TypeArguments="scg:IEnumerable(sd:DataRow)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_439" xml:space="preserve">(from DataRow dr in mvr_data_table.Rows
+              where empIDsAwaitingSignature.Contains((string)dr["Employee ID"])
+              select dr)</CSharpValue>
+                            </InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="scg:List(sam:Row)">
+                              <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_157">update_rows</CSharpReference>
+                            </OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="scg:List(sam:Row)">
+                              <CSharpValue x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_417">new List &lt;Row&gt;()</CSharpValue>
+                            </InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <If sap:VirtualizedContainerService.HintSize="580.6666666666666,632.6666666666666" sap2010:WorkflowViewState.IdRef="If_15">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_425">filtered_rows.Any()</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,174" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="338,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_13">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataTable">
+                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_162">mvr_data_table</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataTable">
+                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_426">filtered_rows.CopyToDataTable()</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,276" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeCode ContinueOnError="{x:Null}" Code="mvr_data_table.Clear();&#xA;                " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="338,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_12" Language="CSharp">
+                          <ui:InvokeCode.Arguments>
+                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="mvr_data_table">
+                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_163">mvr_data_table</CSharpReference>
+                            </InOutArgument>
+                          </ui:InvokeCode.Arguments>
+                        </ui:InvokeCode>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="580.6666666666666,1168" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="546.6666666666666,1048" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="emp_id" />
+                            <Variable x:TypeArguments="sam:Row" Name="update_row" />
+                            <Variable x:TypeArguments="x:String" Name="row_id" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="484.6666666666667,937.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="row_id" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="422.6666666666667,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_64">emp_id</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">row["Employee ID"].ToString()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="sam:Row">
+                                        <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_65">update_row</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="sam:Row">
+                                        <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">new Row()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">row_id</CSharpReference>
+                                      </OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_440" xml:space="preserve">(from DataRow dr in forms_sheet_dt.Rows
+              where (string)dr["Foreman EmpID"] == emp_id
+              select dr["_rowID"].ToString()).FirstOrDefault()</CSharpValue>
+                                      </InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="422.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                              <ui:LogMessage.Level>
+                                <InArgument x:TypeArguments="ui:LogLevel">
+                                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_158">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                                </InArgument>
+                              </ui:LogMessage.Level>
+                              <ui:LogMessage.Message>
+                                <InArgument x:TypeArguments="x:Object">
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_157" xml:space="preserve">"The employee id is:"  + emp_id</CSharpValue>
+                                </InArgument>
+                              </ui:LogMessage.Message>
+                            </ui:LogMessage>
+                            <msa:BuildRow CellValue="4. MVR Approval" ColumnName="Vehicle Assignment" ContinueOnError="False" DisplayName="Build Row" sap:VirtualizedContainerService.HintSize="422.6666666666667,234.66666666666666" sap2010:WorkflowViewState.IdRef="BuildRow_5" StrictValidation="False" _continueOnError="False">
+                              <msa:BuildRow.Row>
+                                <InOutArgument x:TypeArguments="sam:Row">
+                                  <CSharpReference x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpReference`1_56">update_row</CSharpReference>
+                                </InOutArgument>
+                              </msa:BuildRow.Row>
+                              <msa:BuildRow.Sheet>
+                                <InArgument x:TypeArguments="sam:Sheet">
+                                  <CSharpValue x:TypeArguments="sam:Sheet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_139">forms_sheet</CSharpValue>
+                                </InArgument>
+                              </msa:BuildRow.Sheet>
+                            </msa:BuildRow>
+                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="try {&#xA;&#x9;update_row.Id = long.Parse(row_id);&#xA;&#x9;update_rows.Add(update_row);&#xA;}&#xA;&#xA;catch (Exception e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;&#x9;throw;&#xA;}&#xA;&#xA;                " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="422.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
+                              <ui:InvokeCode.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="row_id">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_167">row_id</CSharpValue>
+                                </InArgument>
+                                <InOutArgument x:TypeArguments="scg:List(sam:Row)" x:Key="update_rows">
+                                  <CSharpReference x:TypeArguments="scg:List(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_54">update_rows</CSharpReference>
+                                </InOutArgument>
+                                <InArgument x:TypeArguments="sam:Row" x:Key="update_row">
+                                  <CSharpValue x:TypeArguments="sam:Row" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137">update_row</CSharpValue>
+                                </InArgument>
+                              </ui:InvokeCode.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeCode>
+                          </Sequence>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                    <ui:ForEachRow.DataTable>
+                      <InArgument x:TypeArguments="sd:DataTable">
+                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">mvr_data_table</CSharpValue>
+                      </InArgument>
+                    </ui:ForEachRow.DataTable>
+                  </ui:ForEachRow>
+                  <If sap:VirtualizedContainerService.HintSize="580.6666666666666,484.6666666666667" sap2010:WorkflowViewState.IdRef="If_14">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_418">update_rows.Count &gt; 0</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,197.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <msa:UpdateRows Row="{x:Null}" AllowPartialSuccess="False" ContinueOnError="False" DisplayName="Update Rows" sap:VirtualizedContainerService.HintSize="338,86.66666666666667" sap2010:WorkflowViewState.IdRef="UpdateRows_2" _continueOnError="False">
+                          <msa:UpdateRows.Rows>
+                            <InArgument x:TypeArguments="scg:IList(sam:Row)">
+                              <CSharpValue x:TypeArguments="scg:IList(sam:Row)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">update_rows</CSharpValue>
+                            </InArgument>
+                          </msa:UpdateRows.Rows>
+                          <msa:UpdateRows.SheetID>
+                            <InArgument x:TypeArguments="x:Int64">
+                              <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">forms_sheet_id</CSharpValue>
+                            </InArgument>
+                          </msa:UpdateRows.SheetID>
+                        </msa:UpdateRows>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_171">"List of employee ids: " + update_rows</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">430,849.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">630,891.1 660,891.1</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="error handling" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd:DataTable" Name="spdump_dt" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="fail_send_dt" />
+                        <Variable x:TypeArguments="x:Boolean" Name="exists" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="715.3333333333334,136.66666666666666" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="Mckenneys_Esign\\CSV_Folder\\SPdump.csv">
+                        <ui:FileExistsX.Exists>
+                          <OutArgument x:TypeArguments="x:Boolean">
+                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_174">exists</CSharpReference>
+                          </OutArgument>
+                        </ui:FileExistsX.Exists>
+                      </ui:FileExistsX>
+                      <If sap:VirtualizedContainerService.HintSize="715.3333333333334,1373.3333333333333" sap2010:WorkflowViewState.IdRef="If_16">
+                        <If.Condition>
+                          <InArgument x:TypeArguments="x:Boolean">
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_453">exists==true</CSharpValue>
+                          </InArgument>
+                        </If.Condition>
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="636.6666666666666,1086" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ReadCsvFile Delimitator="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCsvFile_10">
+                              <ui:ReadCsvFile.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_142">spdump_dt</CSharpReference>
+                                </OutArgument>
+                              </ui:ReadCsvFile.DataTable>
+                              <ui:ReadCsvFile.FilePath>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_403">"./" + "Mckenneys_Esign\\CSV_Folder\\SPdump.csv"</CSharpValue>
+                                </InArgument>
+                              </ui:ReadCsvFile.FilePath>
+                            </ui:ReadCsvFile>
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574.6666666666666,776" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.6666666666666,659.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If sap:VirtualizedContainerService.HintSize="478.6666666666667,548.6666666666666" sap2010:WorkflowViewState.IdRef="If_10">
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_427">row["Envelope Status"].ToString() == "failed send"</CSharpValue>
+                                        </InArgument>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,261.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Isses with envelope request. Check MVR" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="338,150.66666666666666" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="MVR Envelope Error" To="austin.taylor@mckenneys.com">
+                                            <ui:SendOutlookMail.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                            </ui:SendOutlookMail.Files>
+                                          </ui:SendOutlookMail>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_354">spdump_dt</CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
+                            </ui:ForEachRow>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">660,849.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Cleanup" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="string csvPath = @&quot;./&quot; + &quot;Mckenneys_Esign\\CSV_Folder&quot;;&#xA;string pdfPath = @&quot;./&quot; + &quot;Mckenneys_Esign\\Signed Envelopes&quot;;&#xA;string[] csvFiles = Directory.GetFiles(csvPath, &quot;*.csv&quot;);&#xA;string[] pdfFiles = Directory.GetFiles(pdfPath, &quot;*.pdf&quot;);&#xA;&#xA;try {&#xA;&#x9;foreach(string file in csvFiles) {&#xA;&#x9;&#x9;File.Delete(file);&#xA;&#x9;}&#xA;}&#xA;&#x9;&#x9;&#xA;catch (Exception e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;}&#xA;&#xA;try {&#xA;&#x9;foreach(string file in pdfFiles) {&#xA;&#x9;&#x9;File.Delete(file);&#xA;&#x9;}&#xA;}&#xA;&#xA;catch (Exception  e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="338,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_11" Language="CSharp">
+                            <ui:InvokeCode.Arguments>
+                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                        </Sequence>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <FlowStep x:Name="__ReferenceID10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">480,99.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">580,182.7 580,199.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Connect to Database " sap:VirtualizedContainerService.HintSize="400,672" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="UID" />
+            <Variable x:TypeArguments="x:String" Name="user" />
+            <Variable x:TypeArguments="x:String" Name="pass" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <meaak:GetCredential MFACode="{x:Null}" Notes="{x:Null}" SecurePassword="{x:Null}" Title="{x:Null}" Website="{x:Null}" ContinueOnError="False" DisplayName="Store Proc UID" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="GetCredential_2" UID="DJjCIwwnXHxU0D4swWy_Dw" _continueOnError="False">
+            <meaak:GetCredential.Login>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_179">user</CSharpReference>
+              </OutArgument>
+            </meaak:GetCredential.Login>
+            <meaak:GetCredential.Password>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_180">pass</CSharpReference>
+              </OutArgument>
+            </meaak:GetCredential.Password>
+          </meaak:GetCredential>
+          <meaak:GetCredential Login="{x:Null}" MFACode="{x:Null}" Notes="{x:Null}" Password="{x:Null}" Title="{x:Null}" Website="{x:Null}" ContinueOnError="False" DisplayName="Smartsheet UID" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="GetCredential_1" UID="Zch0DAw0y04BRBVOA-xsNw" _continueOnError="False">
+            <meaak:GetCredential.SecurePassword>
+              <OutArgument x:TypeArguments="ss:SecureString">
+                <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_172">token</CSharpReference>
+              </OutArgument>
+            </meaak:GetCredential.SecurePassword>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </meaak:GetCredential>
+          <msa:SetSmartsheetToken ContinueOnError="False" DisplayName="Set Smartsheet Token" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="SetSmartsheetToken_13" _continueOnError="False">
+            <msa:SetSmartsheetToken.AccessToken>
+              <InArgument x:TypeArguments="ss:SecureString">
+                <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_385">token</CSharpValue>
+              </InArgument>
+            </msa:SetSmartsheetToken.AccessToken>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </msa:SetSmartsheetToken>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" ProviderName="System.Data.SqlClient" Sql="MWA.[Queries].[ForemanMVR_RPA]">
+            <ui:ExecuteQuery.ConnectionString>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_459">"Data Source=MCKATLSQL;Initial Catalog=MWA;Persist Security Info=True;User ID="+ user + ";Password="+ pass +""</CSharpValue>
+              </InArgument>
+            </ui:ExecuteQuery.ConnectionString>
+            <ui:ExecuteQuery.DataTable>
+              <OutArgument x:TypeArguments="sd:DataTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">foreman_dt</CSharpReference>
+              </OutArgument>
+            </ui:ExecuteQuery.DataTable>
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExecuteQuery>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">foreman_dt.Rows.Count.ToString()</CSharpValue>
+            </InArgument>
+          </WriteLine>
+        </Sequence>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">480,199.5</av:Point>
+                <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">580,282.7 580,306.5 580.6,306.5</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_101">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="csv_dumps_folder_exists" />
+                <Variable x:TypeArguments="x:Boolean" Name="signed_emails_folder_exists" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:FolderExistsX DisplayName="Folder Exists" sap:VirtualizedContainerService.HintSize="412,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_3" Path="Mckenneys_Esign\CSV_Folder">
+                <ui:FolderExistsX.Exists>
+                  <OutArgument x:TypeArguments="x:Boolean">
+                    <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_177">csv_dumps_folder_exists</CSharpReference>
+                  </OutArgument>
+                </ui:FolderExistsX.Exists>
+              </ui:FolderExistsX>
+              <If sap:VirtualizedContainerService.HintSize="412,376" sap2010:WorkflowViewState.IdRef="If_18">
+                <If.Condition>
+                  <InArgument x:TypeArguments="x:Boolean">
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_456">!csv_dumps_folder_exists</CSharpValue>
+                  </InArgument>
+                </If.Condition>
+                <If.Then>
+                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="Mckenneys_Esign\CSV_Folder" />
+                </If.Then>
+              </If>
+              <ui:FolderExistsX DisplayName="Folder Exists" sap:VirtualizedContainerService.HintSize="412,133" sap2010:WorkflowViewState.IdRef="FolderExistsX_4" Path="Mckenneys_Esign\Signed Envelopes">
+                <ui:FolderExistsX.Exists>
+                  <OutArgument x:TypeArguments="x:Boolean">
+                    <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_178">signed_emails_folder_exists</CSharpReference>
+                  </OutArgument>
+                </ui:FolderExistsX.Exists>
+              </ui:FolderExistsX>
+              <If sap:VirtualizedContainerService.HintSize="412,376" sap2010:WorkflowViewState.IdRef="If_19">
+                <If.Condition>
+                  <InArgument x:TypeArguments="x:Boolean">
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_457">!csv_dumps_folder_exists</CSharpValue>
+                  </InArgument>
+                </If.Condition>
+                <If.Then>
+                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="Mckenneys_Esign\Signed Envelopes" />
+                </If.Then>
+              </If>
+            </Sequence>
+            <FlowStep.Next>
+              <FlowDecision x:Name="__ReferenceID3" DisplayName="Envelopes to Send" sap:VirtualizedContainerService.HintSize="103.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                <FlowDecision.Condition>
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">foreman_dt.Rows.Count != 0</CSharpValue>
+                </FlowDecision.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">529,306.5</av:Point>
+                    <av:Size x:Key="ShapeSize">103.2,87.2</av:Size>
+                    <av:PointCollection x:Key="TrueConnector">529,350 300,350 300,399.5</av:PointCollection>
+                    <av:PointCollection x:Key="FalseConnector">632.2,350.1 800,350.1 800,399.5</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <FlowDecision.True>
+                  <FlowStep x:Name="__ReferenceID6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">200,399.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">300,482.7 300,509.5</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Foreman DT to CSV and MVR to CSV" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Writes to a csv containing all foreman that need an MVR form sent out" />
+                      <ui:WriteCsvFile AddHeaders="True" Delimitator="Comma" DisplayName="Write CSV" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="WriteCsvFile_10" ShouldQuote="True">
+                        <ui:WriteCsvFile.DataTable>
+                          <InArgument x:TypeArguments="sd:DataTable">
+                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_347">foreman_dt</CSharpValue>
+                          </InArgument>
+                        </ui:WriteCsvFile.DataTable>
+                        <ui:WriteCsvFile.FilePath>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_398">"./" + "Mckenneys_Esign\\CSV_Folder\\SPdump.csv"</CSharpValue>
+                          </InArgument>
+                        </ui:WriteCsvFile.FilePath>
+                      </ui:WriteCsvFile>
+                      <msa:GetSheetAsCSV SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as CSV" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="GetSheetAsCSV_3" _continueOnError="False">
+                        <msa:GetSheetAsCSV.FilePath>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_404">"./" + "Mckenneys_Esign\\CSV_Folder\\MVR_smartsheet.csv"</CSharpValue>
+                          </InArgument>
+                        </msa:GetSheetAsCSV.FilePath>
+                        <msa:GetSheetAsCSV.SheetID>
+                          <InArgument x:TypeArguments="x:Int64">
+                            <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_235">mvr_sheet_id</CSharpValue>
+                          </InArgument>
+                        </msa:GetSheetAsCSV.SheetID>
+                      </msa:GetSheetAsCSV>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">200,509.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">300,592.7 300,629.5</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Python Script " sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <mpa:RunPowershellScript ContinueOnError="False" DisplayName="Run Powershell Script" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="RunPowershellScript_4" Is64Bit="True" PreferredVersion="PowerShell7_2" _continueOnError="False">
+                            <mpa:RunPowershellScript.FilePath>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_444">powershell_file_path</CSharpValue>
+                              </InArgument>
+                            </mpa:RunPowershellScript.FilePath>
+                          </mpa:RunPowershellScript>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID0</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.True>
+                <FlowDecision.False>
+                  <FlowStep x:Name="__ReferenceID5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">700,399.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">800,482.7 800,781.1 400,781.1</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Python Script " sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <msa:GetSheetAsCSV SheetData="{x:Null}" ContinueOnError="False" DisplayName="Get Sheet as CSV" sap:VirtualizedContainerService.HintSize="338,133" sap2010:WorkflowViewState.IdRef="GetSheetAsCSV_5" _continueOnError="False">
+                        <msa:GetSheetAsCSV.FilePath>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_451">"./" + "Mckenneys_Esign\\CSV_Folder\\MVR_smartsheet.csv"</CSharpValue>
+                          </InArgument>
+                        </msa:GetSheetAsCSV.FilePath>
+                        <msa:GetSheetAsCSV.SheetID>
+                          <InArgument x:TypeArguments="x:Int64">
+                            <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_452">mvr_sheet_id</CSharpValue>
+                          </InArgument>
+                        </msa:GetSheetAsCSV.SheetID>
+                      </msa:GetSheetAsCSV>
+                      <mpa:RunPowershellScript ContinueOnError="False" DisplayName="Run Powershell Script" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="RunPowershellScript_5" Is64Bit="True" PreferredVersion="PowerShell7_2" _continueOnError="False">
+                        <mpa:RunPowershellScript.FilePath>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_406">powershell_file_path</CSharpValue>
+                          </InArgument>
+                        </mpa:RunPowershellScript.FilePath>
+                      </mpa:RunPowershellScript>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.False>
+              </FlowDecision>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>
